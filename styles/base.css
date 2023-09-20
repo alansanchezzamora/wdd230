@@ -3,7 +3,7 @@
 
 h1 {
     font-family: 'Permanent Marker', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: #FF6700;
+    color: #ff2600;
     margin: auto;
     max-width: 50%;
 }
@@ -73,7 +73,7 @@ h2{
 hr.solid {
     border-top: 3px solid #bbb;
   }
-  img{
+img {
     max-width: 200px;
     height: auto;
   }

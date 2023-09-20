@@ -4,4 +4,4 @@ document.querySelector("#lastModified").textContent = oLastModif;
 const options = {
     year: "numeric"
 };
-document.querySelector("#yearDate").innerHTML = "&copy" + new Date().toLocaleDateString("en-US", options);
+document.querySelector("#yearDate").innerHTML =  new Date().toLocaleDateString("en-US", options);
