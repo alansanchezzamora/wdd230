@@ -3,38 +3,53 @@
 
 h1 {
     font-family: 'Permanent Marker', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: #ff2600;
+    color: darkred;
     margin: auto;
-    max-width: 50%;
+    max-width: 600px;
 }
 main{
     font-family: 'Cantarell', Arial, Helvetica, sans-serif;
     color: #004E98;
-    max-width: 50%;
+    max-width: 600px;
     margin: auto;
 }
 header{
     display: grid;
     margin: auto;
-    max-width: 50%;
-    grid-template-columns: auto auto;
+    max-width: 600px;
+        grid-template-columns: 1fr 1fr;
     background-color: #EBEBEB;
 }
 
 .menu{
     margin: auto;
-    max-width: 50%;
+        max-width: 600px;
     list-style-type: none;
     text-align: center;
     background-color: #c0c0c0;
     font-family: 'Cantarell', Arial, Helvetica, sans-serif;
     font-size: larger;
     text-decoration: none;
+    display: block;
+    
+    }
+    
+    nav {
+        margin-bottom: 20px;
+    }
+    
+    nav a {
+        display: block;
+        padding: 1rem;
+    }
+    
+    nav a:hover {
+        background-color: #e76f51;
 }
 footer{
     margin: auto;
     background-color: #C0C0C0;
-    max-width: 50%;
+    max-width: 600px;
     text-align: center;
 }
 
