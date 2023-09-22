@@ -1,0 +1,32 @@
+header {
+    background-color: #003049;
+    color: white;
+    border-radius: 10px;
+}
+
+body {
+    max-width: 400px;
+    text-align: center;
+    text-align: block;
+}
+
+section {
+    background-color: #ebebeb;
+    border-radius: 10px;
+}
+
+section h3 {
+    background-color: #2a9d8f;
+    padding: 1rem;
+    color: #ebebeb;
+}
+
+img {
+    max-width: 300px;
+}
+
+footer {
+    background-color: #003049;
+    color: white;
+    border-radius: 10px;
+}
