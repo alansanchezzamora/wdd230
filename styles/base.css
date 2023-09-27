@@ -2,93 +2,151 @@
 @import url("https://fonts.googleapis.com/css2?family=Cantarell&family=Permanent+Marker&display=swap");
 
 h1 {
-    font-family: 'Permanent Marker', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: darkred;
-    margin: auto;
-    max-width: 800px;
+  font-family: "Permanent Marker", "Trebuchet MS", "Lucida Sans Unicode",
+    "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: darkred;
+  margin: auto;
+  max-width: 800px;
 }
-main{
-    font-family: 'Cantarell', Arial, Helvetica, sans-serif;
-    color: #004E98;
-    max-width: 800px;
-    margin: auto;
+main {
+  font-family: "Cantarell", Arial, Helvetica, sans-serif;
+  color: #004e98;
+  max-width: 800px;
+  margin: auto;
 }
-header{
-    display: grid;
-    margin: auto;
-    max-width: 800px;
-        grid-template-columns: 1fr 1fr;
-    background-color: #EBEBEB;
-}
-
-.menu{
-    margin: auto;
-        max-width: 800px;
-    list-style-type: none;
-    text-align: center;
-    background-color: #c0c0c0;
-    font-family: 'Cantarell', Arial, Helvetica, sans-serif;
-    font-size: larger;
-    text-decoration: none;
-    display: block;
-    
-    }
-    
-    nav {
-        margin-bottom: 20px;
-    }
-    
-    nav a {
-        display: block;
-        padding: 1rem;
-    }
-    
-    nav a:hover {
-        background-color: #e76f51;
-}
-footer{
-    margin: auto;
-    background-color: #C0C0C0;
-    max-width: 600px;
-    text-align: center;
+header {
+  display: grid;
+  margin: auto;
+  max-width: 800px;
+  grid-template-columns: 1fr 1fr;
+  background-color: #ebebeb;
 }
 
-#header-picture{
-    margin: auto;
+#menu {
+  margin: auto;
+  max-width: 800px;
+  list-style-type: none;
+  text-align: center;
+  background-color: #c0c0c0;
+  font-family: "Cantarell", Arial, Helvetica, sans-serif;
+  font-size: larger;
+  text-decoration: none;
+  display: block;
 }
-.card{
 
-    background-color: #EBEBEB;
-    border: #004E98;
-    border-radius: 10px;
+nav {
+  margin-bottom: 20px;
 }
-.card-grid{
-    display: grid;
-    grid-template-rows: repeat(10,1fr);
-    list-style-type: none;
+
+nav a {
+  display: block;
+  padding: 1rem;
 }
-.class{
-    background-color: #EBEBEB;
-    border-radius: 10px;
-    border: #004E98;
-    text-align: center;
+
+nav a:hover {
+  background-color: #e76f51;
 }
-ul{
-    list-style-type: none;
+footer {
+  margin: auto;
+  background-color: #c0c0c0;
+  max-width: 600px;
+  text-align: center;
 }
-h3{
-    color:#004E98;
-    background-color: #C0C0C0;
-    padding: 10px;
-    text-align: center;
+
+#header-picture {
+  margin: auto;
 }
-h2{
-    text-align: center;
+.card {
+  background-color: #ebebeb;
+  border: #004e98;
+  border-radius: 10px;
+}
+.card-grid {
+  display: grid;
+  grid-template-rows: repeat(10, 1fr);
+  list-style-type: none;
+}
+.class {
+  background-color: #ebebeb;
+  border-radius: 10px;
+  border: #004e98;
+  text-align: center;
+}
+ul {
+  list-style-type: none;
+}
+h3 {
+  color: #004e98;
+  background-color: #c0c0c0;
+  padding: 10px;
+  text-align: center;
+}
+h2 {
+  text-align: center;
 }
 hr.solid {
-    border-top: 3px solid #bbb;
-  }
+  border-top: 3px solid #bbb;
+}
 img {
-    max-width: 200px;
-    height: auto;
-  }
+  max-width: 200px;
+  height: auto;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: Roboto, sans-serif;
+}
+/* Mobile View ***************/
+#menu {
+	display: block;
+	font-size: 2rem;
+	font-weight:700;
+	text-decoration: none;
+	padding: .5rem .75rem;
+	background-color: #eee;
+	color: #000;
+}
+
+#menu::before {
+	content: "≡";
+}
+
+nav {
+	background-color: tomato;
+}
+.navigation {
+	list-style: none;
+	margin: 0 auto;
+	max-width: 760px;
+}
+
+.navigation li {
+	display: none;
+}
+.navigation a {
+	display: block;
+	padding: 0.75rem;
+	text-align: left;
+	text-decoration: none;
+	color: black;
+	font-weight: 700;
+	transition: 0.5s;
+	font-size: clamp(1rem, 2vmin, 1.5rem);
+}
+
+.navigation a:hover, .navigation a:active {
+	color: white;
+	background-color: black;
+}
+
+.show li {
+	display: block;
+}
+
+#menu.show::before {
+	content: "X";
+}
