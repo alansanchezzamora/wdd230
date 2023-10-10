@@ -7,6 +7,7 @@
     <title>Monterrey Chamber Website</title>
     <meta name="description" content="This is the WDD230 project, Monterrey Chamber of commerce website">
     <meta name="author" content="Alan Sanchez">
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="icon" href="images/favicon.ico">
 
@@ -14,7 +15,7 @@
     <meta property="og:title" content="WDD 230 - Monterrey Chamber of commerce website">
     <meta property="og:type" content="website">
     <meta property="og:image"
-        content="https://raw.githubusercontent.com/alansanchezzamora/wdd230/main/images/wdd230.png">
+        content="https://raw.githubusercontent.com/alansanchezzamora/wdd230/main/chamber/images/wdd230.png">
     <meta property="og:image:width" content="1200px">
     <meta property="og:image:height" content="630px">
     <meta property="og:url" content="https://alansanchezzamora.github.io/wdd230">
@@ -23,12 +24,38 @@
 
 <body>
     <header>
-        <h1>Page Title - Heading 1</h1>
+        <h1>WDD230 - Mty CC</h1>
     </header>
-    <nav></nav>
-    <main></main>
-    <footer>Alan Sánchez | BYU-Idaho | WDD 230 - Fall 2023</footer>
-    <script src="scripts/"></script>
+    <div id="hero">
+        <div id="hero-box">
+            <img id="hero-img" src="images/hero.jpg" alt="Monterrey SkyLine">
+        </div>
+        <section id="hero-msg">
+            <div class="button-box">
+                <a class="call-to-action" href="join-us.html">Join us</a>
+            </div>
+        </section>
+    </div>
+    <main>
+        <section id="events">
+            <h3>Current events: </h3>
+            <ul>
+                <li>1: </li>
+                <li>2: </li>
+            </ul>
+        </section>
+        <section id="weather API">
+            <h3>Weather API</h3>
+            <p>To be populated</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="yearDate"></span> </p>
+        <p>Alan Jared Sánchez Zamora</p>
+        <p>WDD230</p>
+        <div id="lastModified"></div>
+    </footer>
+    <script src="scripts/java.js"></script>
 </body>
 
 </html>
