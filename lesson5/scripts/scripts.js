@@ -8,22 +8,22 @@ button.addEventListener('click', function () {
         // create a li and a delete element button
 
         let listItem = document.createElement('li');
-        let deleteBtn = document.createElement('button');
+        let deleteButton = document.createElement('button');
 
         // set attributes
         listItem.classList.add('list');
-        deleteBtn.classList.add('delete');
+        deleteButton.classList.add('delete');
 
         // asign values
         listItem.textContent = userEntry.value;
-        deleteBtn.textContent = "✖";
+        deleteButton.textContent = "✖";
 
         // add to list element and the delete button
         list.appendChild(listItem);
-        listItem.append(deleteBtn);
+        listItem.append(deleteButton);
 
         // delete button
-        deleteBtn.addEventListener('click', function () {
+        deleteButton.addEventListener('click', function () {
 
             listItem.remove();
             
