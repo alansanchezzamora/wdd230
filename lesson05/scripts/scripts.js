@@ -28,5 +28,8 @@ button.addEventListener('click', function () {
             listItem.remove();
             
         });
+                
+        document.querySelector('input').focus();
+        userEntry.value = '';
     }
 });
