@@ -9,6 +9,8 @@
     <meta name="author" content="Alan Sanchez">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/larger.css">
     <link rel="icon" href="images/favicon.ico">
 
     <!--  Essential META Tags -->
@@ -24,9 +26,24 @@
 
 <body>
     <header>
-        <h1>WDD230 - Mty CC</h1>
+        <img id="header-picture" src="images/logo-nl.png" alt="picture">
+        <h1>Monterrey Chamber Site</h1>
     </header>
+    <nav id="menu1">
+        <button id="menu"></button>
+        <ul class="navigation">
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#">Discover</a></li>
+            <li><a href="#">Directory</a></li>
+            <li><a href="#">Join</a></li>
+            <li>
+                <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng&id=p10#p10"
+                    target="_blank">Scripture</a>
+            </li>
+        </ul>
+    </nav>
     <main>
+
         <div id="hero">
             <div id="hero-box">
                 <img id="hero-img" src="images/hero.jpg" alt="Monterrey SkyLine">
@@ -37,21 +54,21 @@
                 </div>
             </section>
         </div>
-        <section id="events">
-            <h3>Current events: </h3>
-            <ul>
-                <li>1: </li>
-                <li>2: </li>
-            </ul>
+        <section>
+            <h2>Section 1</h2>
+            <p>This is the content of section 1.</p>
         </section>
-        <section id="space">
-            <p>To be populated</p>
+        <section>
+            <h2>Section 2</h2>
+            <p>This is the content of section 2.</p>
         </section>
-        <section id="space2">
-            <p>To be populated</p>
+        <section>
+            <h2>Section 3</h2>
+            <p>This is the content of section 3.</p>
         </section>
-        <section id="space3">
-            <p>To be populated</p>
+        <section>
+            <h2>Section 4</h2>
+            <p>This is the content of section 4.</p>
         </section>
 
     </main>
@@ -61,7 +78,7 @@
         <p>WDD230</p>
         <div id="lastModified"></div>
     </footer>
-    <script src="scripts/java.js"></script>
+    <script src="scripts/getdates.js"></script>
 </body>
 
 </html>
