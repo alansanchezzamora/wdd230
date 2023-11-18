@@ -242,3 +242,24 @@ body, html {
   background-color: #555;
   color: white;
 }
+
+.hero-image {
+  background-image: url(https://placekitten.com/600/400);
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  margin: auto;
+  width: 800px;
+}
+
+.hero-text {
+  max-width: 600px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background for better text readability */
+  border-radius: 10px;
+}

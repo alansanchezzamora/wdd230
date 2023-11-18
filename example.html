@@ -1,69 +1,63 @@
-.
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grid Webpage</title>
+    <title>Responsive Hero Image</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
+            font-family: Arial, sans-serif;
         }
 
-        header {
-            background-color: #333;
+        .hero-image {
+            position: relative;
+            background-image: url('https://www.placekiten.com/600/400'); /* Replace with the relative path to your image */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: #fff;
             text-align: center;
-            padding: 10px;
         }
 
-        main {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-gap: 20px;
+        .hero-text {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            max-width: 400px;
             padding: 20px;
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent background for better text readability */
+            border-radius: 10px;
         }
 
-        section {
-            border: 1px solid #ccc;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        .hero-text h1,
+        .hero-text p,
+        .hero-text a {
+            color: #fff;
+            margin: 0;
+        }
+
+        /* Add media query for smaller screens if needed */
+        @media screen and (max-width: 768px) {
+            .hero-text {
+                max-width: 80%;
+            }
         }
     </style>
 </head>
 
 <body>
-
-    <header>
-        <h1>Grid Webpage</h1>
-    </header>
-
-    <main>
-        <section>
-            <h2>Section 1</h2>
-            <p>This is the content of section 1.</p>
-        </section>
-
-        <section>
-            <h2>Section 2</h2>
-            <p>This is the content of section 2.</p>
-        </section>
-
-        <section>
-            <h2>Section 3</h2>
-            <p>This is the content of section 3.</p>
-        </section>
-
-        <section>
-            <h2>Section 4</h2>
-            <p>This is the content of section 4.</p>
-        </section>
-    </main>
-
+    <div class="hero-image">
+        <div class="hero-text">
+            <h1>Your Website Title</h1>
+            <p>Subtitle or a brief description goes here.</p>
+            <a href="#learn-more">Learn More</a>
+        </div>
+    </div>
 </body>
 
 </html>
