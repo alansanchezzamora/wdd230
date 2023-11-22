@@ -24,3 +24,12 @@ The CSS class rules will handle the different views, layouts, and displays.
 🗝️ JavaScript only applies the class value or not.
 */
 
+
+document.addEventListener("DOMContentLoaded", function () {
+  const darkModeToggle = document.getElementById("dark-mode-toggle");
+  const body = document.body;
+
+  darkModeToggle.addEventListener("click", function () {
+    body.classList.toggle("dark-mode");
+  });
+});

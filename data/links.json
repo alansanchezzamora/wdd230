@@ -1,0 +1,66 @@
+{
+    "lessons": [
+        {
+            "lesson": "01",
+            "links": [
+                {
+                    "url": "lesson01/holygrail.html",
+                    "title": "Holy Grail"
+                },
+                {
+                    "url": "lesson01/media-query.html",
+                    "title": "Media Query"
+                }
+            ]
+        },
+        {
+            "lesson": "02",
+            "links": [
+                {
+                    "url": "lesson02/design-principles.html",
+                    "title": "Design Principles"
+                }
+            ]
+        },
+        {
+            "lesson": "03",
+            "links": [
+                {
+                    "url": "https://codepen.io/Alan-S-nchez-the-flexboxer/pen/rNodpEQ",
+                    "title": "Pseudo-Elements"
+                },
+                {
+                    "url": "https://codepen.io/Alan-S-nchez-the-flexboxer/pen/mdaxXxw",
+                    "title": "Hamburguer Menu"
+                }
+            ]
+        },
+        {
+            "lesson": "04",
+            "links": [
+                {
+                    "url": "https://codepen.io/Alan-S-nchez-the-flexboxer/pen/oNJPebZ",
+                    "title": "Pseudo-Clases"
+                }
+            ]
+        },
+        {
+            "lesson": "05",
+            "links": [
+                {
+                    "url": "wdd230/lesson05/bom.html",
+                    "title": "DOM Excersise"
+                }
+            ]
+        },
+        {
+            "lesson": "06",
+            "links": [
+                {
+                    "url": "https://raw.githubusercontent.com/alansanchezzamora/wdd230/main/images/landscape.jpg",
+                    "title": "Landscape Image"
+                }
+            ]
+        }
+    ]
+}
