@@ -15,12 +15,16 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/normal.css">
     <link rel="stylesheet" href="styles/large.css">
+    <link rel="icon" href="images/favicon.ico">
+
 </head>
 
 
 <body>
     <header>
+        <img src="images/logo-nl.png" alt="Monterrey Logo">
         <h1>Monterrey Chamber of Commerce</h1>
+        <h4 id="currentDate"></h4>
         <!-- Hamburger menu button -->
         <button onclick="toggleNav()">☰ Menu</button>
     </header>
@@ -60,18 +64,23 @@
     </main>
     <footer>
         <div id="contact-info">
-            <h2>Contact information</h2>
-            <h4>email : contact@mtychamber.com</h4>
-            <h4>phone : (81)10042234</h4>
+            <img src="images/logo-nl.png" alt="Monterrey Logo">
+            <h2>Monterrey Chamber of Commerce</h2>
+            <h4>Calle 1 #123 Col Zona Centro Monterrey NL</h4>
+            <h4>contact@mtychamber.com</h4>
+            <h4>+(81)10042234</h4>
         
         </div>
         <div id="dev-info">
             <hr>
+            <p>&copy 2023 Monterrey Chamber</p>
             <p>Alan Jared Sánchez Zamora</p>
-            <p>Chamber website WDD230</p>
+            <p>WDD230 Project</p>
             <div id="lastModified"></div>
         </div>
     </footer>
     <script src="scripts/getdates.js"></script>
+    <script src="scripts/currentDate.js"></script>
+
     </body>
 </html>
