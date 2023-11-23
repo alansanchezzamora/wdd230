@@ -16,60 +16,79 @@
     <link rel="stylesheet" href="styles/normal.css">
     <link rel="stylesheet" href="styles/large.css">
     <link rel="icon" href="images/favicon.ico">
-
 </head>
 
 
 <body>
     <header>
-        <img src="images/logo-nl.png" alt="Monterrey Logo">
-        <h1>Monterrey Chamber of Commerce</h1>
+        <div id="logo">
+            <img id="img-header" src="images/logo-nl.png" alt="Monterrey Logo">
+            <h1>Monterrey Chamber of Commerce</h1>
+        </div>
         <h4 id="currentDate"></h4>
-        <!-- Hamburger menu button -->
-        <button onclick="toggleNav()">☰ Menu</button>
+        <div id="mode">
+            <em>Enable Dark Mode</em>⚫
+        </div>
+        <nav>
+            <button id="menu"></button>
+            <ul class="navigation">
+                <li><a href="#" title="Home" class="active">Home</a></li>
+                <li><a href="#" title="About Us">About Us</a></li>
+                <li><a href="#" title="Service">Services</a></li>
+                <li><a href="#" title="History">Products</a></li>
+                <li><a href="#" title="Contact">Contact Us</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav id="mainNav">
-        <!-- Navigation links go here -->
-        <a href="#section1">Section 1</a>
-        <a href="#section2">Section 2</a>
-        <a href="#section3">Section 3</a>
-        <a href="#section4">Section 4</a>
-        <a href="#section5">Section 5</a>
-    </nav>
-    <main>
-        <section id="hero-image">
-            <h2>Section 1</h2>
-            <p>Content for section 1 goes here.</p>
-        </section>
 
+    <main>
+        <div class="hero-container">
+            <img class="hero-image" src="images/hero.jpg" alt="Hero Image">
+            <h1 class="hero-text">Welcome</h1>
+            <div class="call-to-action">
+                <button class="cta-button">Join Us Today</button>
+            </div>
+        </div>
         <section id="current-events">
-            <h2>Section 2</h2>
+            <h2>Section 1</h2>
             <p>Content for section 2 goes here.</p>
         </section>
 
         <section id="weather-card">
-            <h2>Section 3</h2>
-            <p>Content for section 3 goes here.</p>
+            <h2> Weather Information </span></h2>
+            <h4>Monterrey, Nuevo León</h4>
+            <h4><span id="current-temp"></span></h4>
+            <figure>
+                <img id="weather-icon" src="" alt="">
+                <figcaption></figcaption>
+            </figure>
+            <h4>Forecast 3 days</h4>
         </section>
-
+        <h3>Member Spotlights</h3>
         <section id="company-spotlights">
-            <h2>Section 4</h2>
+            <h2>Section 3</h2>
             <p>Content for section 4 goes here.</p>
         </section>
         <section id="section5">
-            <h2>Section 5</h2>
+            <h2>Section 4</h2>
             <p>Content for section 5 goes here.</p>
         </section>
     </main>
     <footer>
         <div id="contact-info">
-            <img src="images/logo-nl.png" alt="Monterrey Logo">
+            <img id="footer-img" src="images/logo-nl.png" alt="Monterrey Logo">
             <h2>Monterrey Chamber of Commerce</h2>
             <h4>Calle 1 #123 Col Zona Centro Monterrey NL</h4>
             <h4>contact@mtychamber.com</h4>
             <h4>+(81)10042234</h4>
-        
+
+        </div>
+        <div class="google-map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d230187.00306399795!2d-100.4679068735161!3d25.649011979312956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86629531b437f8f5%3A0xa3d3d3ca6ac89894!2sMonterrey%2C%20N.L.!5e0!3m2!1ses-419!2smx!4v1695943508451!5m2!1ses-419!2smx"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div id="dev-info">
             <hr>
@@ -81,6 +100,9 @@
     </footer>
     <script src="scripts/getdates.js"></script>
     <script src="scripts/currentDate.js"></script>
-
+    <script src="scripts/hamMenu.js"></script>
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/darkMode.js"></script>
     </body>
+
 </html>
