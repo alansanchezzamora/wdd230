@@ -1,57 +1,179 @@
-
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header img {
+  width: 20%;
+  height: auto;
+}
+footer img {
+  width: 20%;
+  height: auto;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  display: grid;
+  grid-template-rows: 1fr 50px 1fr;
+}
+
+/*Dark Mode*/
+
+/*HEADER GRID */
+
+section {
+  padding: 20px;
+  margin: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+}
+/*HERO IMG*/
+.hero-container {
+  position: relative;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block; 
+}
+
+.hero-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.call-to-action {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.cta-button {
+    background-color: whitesmoke;
+    color: black;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/*Google-Map*/
+.google-map {
+    padding-bottom: 50%;
+    position: relative;
+  }
+  
+  .google-map iframe {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
     padding: 10px;
+  }
+/*FOOTER GRID*/
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  bottom: 0;
+  width: 100%;
+}
+#contact-info {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  place-items: center;
+}
+
+#footer-img {
+  grid-row: 1/5;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 nav {
-    background-color: #f4f4f4;
-    padding: 10px;
-    text-align: center;
-    display: none; /* Initially hide the navigation */
+  max-width: 700px;
+  margin: 1rem auto;
 }
 
-nav a {
-    display: block;
-    padding: 10px;
-    margin: 5px;
-    text-decoration: none;
-    color: #333;
-    background-color: #ddd;
+/* HAMBURGUER MENU */
+#menu {
+  font-size: 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 3px 7px 6px;
+  background-color: #eee;
+  color: #000;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
 }
 
-section {
-    padding: 20px;
-    margin: 10px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
+#menu::before {
+  content: "☰";
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    bottom: 0;
-    width: 100%;
+#menu.open::before {
+  content: "🔙";
 }
 
-/* Media query for small screens (hide/show navigation) */
-@media screen and (max-width: 600px) {
-    nav a {
-        display: none;
-    }
+.navigation {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  background-color: #333;
+  color: #fff;
+}
+.navigation li {
+  display: none;
+}
+.navigation li a {
+  display: block;
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+}
+.navigation li a:hover {
+  background-color: #bbb;
+  color: #333;
+  font-weight: 700;
+}
 
-    nav.show {
-        display: block;
-    }
+/* when the button is clicked - the open class is toggle (added/removed) and accounted for here */
+.open li {
+  display: block;
+  width: 100%;
+}
+.open li a {
+  display: block;
+}
+
+.active::before {
+  content: "📍 ";
+}
+
+.stuff {
+  margin: 0.5m;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #bed;
+  max-width: 580px;
+  height: 100vh;
 }
