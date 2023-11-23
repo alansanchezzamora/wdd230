@@ -1,29 +1,38 @@
 @media (min-width: 37.5em) {
-	h1 {
-		font-size: 2.5rem;
-		margin-left: 0;
-		text-align: center;
-	}
-	
-	h2 {
-		font-size: 2rem;
-		text-align: center;
-	}
+  /*Grid*/
+  header{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .hero-container{
+    grid-column: 1/3;
+  }
+  #contact-info img{
+    width: 30%;
+    height: auto;
+}
 
-	#menu {
-		display: none; /* hide hamburger button */
-	}
+  /* Hamburguer Button*/
+  #menu {
+    display: none;
+  }
 
-	.navigation {
-		flex-direction: row;
-	}
+  .navigation {
+    flex-direction: row;
+  }
 
-	.navigation li {
-		display: block;
-		flex: 1 1 100%;
-	}
-	
-	.stuff {
-		margin: 1rem auto;
-	}
+  .navigation li {
+    display: block;
+    flex: 1 1 100%;
+  }
+
+  .stuff {
+    margin: 1rem auto;
+  }
 }
