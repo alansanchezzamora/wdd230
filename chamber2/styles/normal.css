@@ -2,9 +2,9 @@
   /*Grid*/
   header{
     display: flex;
-    text-align: center;
-    justify-content: center;
+    flex-flow: wrap;
     align-items: center;
+    justify-content: space-around;
   }
   main {
     display: grid;
@@ -25,6 +25,7 @@
 
   .navigation {
     flex-direction: row;
+    
   }
 
   .navigation li {

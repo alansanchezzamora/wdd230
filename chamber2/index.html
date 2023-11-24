@@ -22,14 +22,14 @@
 <body>
     <header>
         <div id="logo">
-            <img id="img-header" src="images/logo-nl1.png" alt="Monterrey Logo">
+            <img id="img-header" src="images/logo-nl1.webp" alt="Monterrey Logo">
         </div>
         <h4 id="currentDate"></h4>
         <div id="mode">
-            <em>Enable Dark Mode</em>⚫
+            <em> Dark Mode</em>🌝
         </div>
     </header>
-    <nav>
+    <nav id="nav-menu">
         <button id="menu"></button>
         <ul class="navigation">
             <li><a href="#" title="Home" class="active">Home</a></li>
@@ -44,7 +44,11 @@
 
     <main>
         <div class="hero-container">
-            <img class="hero-image" src="images/hero.jpg" alt="Hero Image">
+            <picture>
+                <source media="(max-width: 37.5em)" srcset="images/hero-img-small.webp">
+                <source media="(max-width: 60em)" srcset="images/hero-img-medium.webp">
+                <img id="hero-image" src="images/hero-img-big.webp" alt="large hero image" loading="lazy" width="1125" height="750">
+            </picture>
             <h1 class="hero-text">Welcome</h1>
             <div class="call-to-action">
                 <button class="cta-button">Join Us Today</button>
@@ -80,7 +84,7 @@
     </main>
     <footer>
         <div id="contact-info">
-            <img id="footer-img" src="images/logo-nl.png" alt="Monterrey Logo">
+            <img id="footer-img" src="images/logo-nl.webp" loading="lazy" alt="Monterrey Logo">
             <h2>Monterrey Chamber of Commerce</h2>
             <h4>Calle 1 #123 Col Zona Centro Monterrey NL</h4>
             <h4>contact@mtychamber.com</h4>
