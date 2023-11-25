@@ -4,60 +4,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Hero Image</title>
+    <title>Gallery with Aside</title>
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
+        :root {
+            --back: hsla(150, 50%, 30%, 1);
+            --back2: hsla(150, 50%, 30%, .5);
+            --foredark: hsla(0, 0%, 10%, 1);
+            --forelight: hsla(0, 0%, 100%, 1);
+            --border: hsla(0, 0%, 20%, .8);
+            --borderlight: hsla(0, 0%, 33%, .3);
+            --shadow: hsl(0, 0%, 50%);
+            --zebra: hsl(0, 0%, 93%, 1);
         }
 
-        .hero-image {
-            position: relative;
-            background-image: url('https://www.placekiten.com/600/400'); /* Replace with the relative path to your image */
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
+        body {
+            font-family: "EB Garamond", Arial, serif;
+        }
+
+        table {
+            margin: 10px auto;
+            border: thin solid var(--border);
+            box-shadow: 0 0 10px var(--shadow);
+            border-collapse: collapse;
+        }
+
+        caption {
+            padding: 10px;
+            caption-side: bottom;
+            color: var(--back);
+            font-size: .85rem;
+        }
+
+        tr:first-child th,
+        .highlight {
+            background-color: var(--back);
+            color: var(--forelight);
+        }
+
+        th,
+        td {
+            padding: 7px 15px;
+            border: 1px solid var(--borderlight);
+        }
+
+        th {
+            background-color: var(--back2);
+            font-size: larger;
+        }
+
+        td {
             text-align: center;
         }
 
-        .hero-text {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            max-width: 400px;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.7); /* Semi-transparent background for better text readability */
-            border-radius: 10px;
-        }
-
-        .hero-text h1,
-        .hero-text p,
-        .hero-text a {
-            color: #fff;
-            margin: 0;
-        }
-
-        /* Add media query for smaller screens if needed */
-        @media screen and (max-width: 768px) {
-            .hero-text {
-                max-width: 80%;
-            }
+        tbody tr:nth-child(odd) {
+            background-color: var(--zebra);
         }
     </style>
 </head>
 
 <body>
-    <div class="hero-image">
-        <div class="hero-text">
-            <h1>Your Website Title</h1>
-            <p>Subtitle or a brief description goes here.</p>
-            <a href="#learn-more">Learn More</a>
-        </div>
-    </div>
+    <header>
+        <h1>Gallery with Aside</h1>
+    </header>
+    
+    <main>
+        <table>
+            <caption>Table 1: July through November</caption>
+            <thead>
+                <tr>
+                    <th colspan="2" scope="colgroup">Wasatch Sales</th>
+                </tr>
+                <tr>
+                    <th scope="col">Month</th>
+                    <th scope="col">Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>July</td>
+                    <td>3,000</td>
+                </tr>
+                <tr>
+                    <td>August</td>
+                    <td class="highlight">8,000</td>
+                </tr>
+                <tr>
+                    <td>September</td>
+                    <td>4,000</td>
+                </tr>
+                <tr>
+                    <td>October</td>
+                    <td>3,000</td>
+                </tr>
+                <tr>
+                    <td>November</td>
+                    <td>2,000</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
 </body>
 
 </html>

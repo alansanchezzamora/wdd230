@@ -30,4 +30,10 @@ main{
     width: 30%;
     height: auto;
 }
+.discover-img{
+    width: 60%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
 }
