@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta property="og:title" content="Monterrey Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image"
+        content="https://github.com/alansanchezzamora/wdd230/blob/70942a5a163c936b0c7b5acb3cefa987e855c5af/chamber2/images/og-mty.jpg">
+    <meta property="og:url" content="https://lmhprap.github.io/wdd230/chamber/index.html">
+    <meta name="author" content="Alan Sanchez Zamora">
+    <meta name="description" content="Monterrey Nuevo Leon Chamber of Commerce, join us!">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Monterrey Chamber of Commerce Site</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/normal.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="icon" href="images/favicon.ico">
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <img id="img-header" src="images/logo-nl1.webp" alt="Monterrey Logo">
+        </div>
+        <h4 id="currentDate"></h4>
+        <div id="mode">
+            <em> Dark Mode</em>🌝
+        </div>
+    </header>
+    <nav id="nav-menu">
+        <button id="menu"></button>
+        <ul class="navigation">
+            <li><a href="index.html" title="Home">Home</a></li>
+            <li><a href="discover.html" title="Discover">Discover</a></li>
+            <li><a href="#" title="Directory" class="active">Directory</a></li>
+            <li><a href="join.html" titl e="Join">Join</a></li>
+            <li><a href="#" title="Contact">Contact Us</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div id="cards"></div>
+        <main>
+            <div class="menu">
+                <button id="grid">⏹️Grid</button>
+                <button id="list">📄List</button>
+            </div>
+            <hr>
+            <article class="grid">
+            </article>
+        </main>
+    </main>
+    <footer>
+        <div id="contact-info">
+            <img id="footer-img" src="images/logo-nl.webp" loading="lazy" alt="Monterrey Logo">
+            <h2>Monterrey Chamber of Commerce</h2>
+            <h4>Calle 1 #123 Col Zona Centro Monterrey NL</h4>
+            <h4>contact@mtychamber.com</h4>
+            <h4>+(81)10042234</h4>
+
+        </div>
+        <div class="google-map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d230187.00306399795!2d-100.4679068735161!3d25.649011979312956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86629531b437f8f5%3A0xa3d3d3ca6ac89894!2sMonterrey%2C%20N.L.!5e0!3m2!1ses-419!2smx!4v1695943508451!5m2!1ses-419!2smx"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div id="dev-info">
+            <hr>
+            <p>&copy 2023 Monterrey Chamber</p>
+            <p>Alan Jared Sánchez Zamora</p>
+            <p>WDD230 Project</p>
+            <div id="lastModified"></div>
+        </div>
+    </footer>
+    <script src="scripts/getdates.js"></script>
+    <script src="scripts/currentDate.js"></script>
+    <script src="scripts/hamMenu.js"></script>
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/visits.js"></script>
+    <script src="scripts/directory.js"></script>
+</body>
+
+</html>
