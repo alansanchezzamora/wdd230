@@ -1,27 +1,9 @@
-const gridbutton = document.querySelector("#grid");
-const listbutton = document.querySelector("#list");
-const display = document.querySelector("article");
-
-// The following code could be written cleaner. How? We may have to simplfiy our HTMl and think about a default view.
-
-gridbutton.addEventListener("click", () => {
-  // example using arrow function
-  display.classList.add("grid");
-  display.classList.remove("list");
-});
-
-listbutton.addEventListener("click", showList); // example using defined function
-
-function showList() {
-  display.classList.add("list");
-  display.classList.remove("grid");
-}
-
-const url = "data/members.json";
+const url1 =
+  "https://raw.githubusercontent.com/alansanchezzamora/wdd230/main/chamber2/data/members.json";
 const cards = document.querySelector("#cards");
 
 async function getBusinessesData() {
-  const response = await fetch(url);
+  const response = await fetch(url1);
   const data = await response.json();
   displayBusinesses(data.businesses);
 }
@@ -44,7 +26,8 @@ const displayBusinesses = (businesses) => {
     logo.setAttribute("width", "340");
     logo.setAttribute("height", "440");
 
-    bName.textContent = `Name : ${business.name}`;
+    bName.textContent = `${business.name}`;
+    memberSince.textContent = `Member Since: ${business.member - since}`;
 
     card.appendChild(bName);
     card.appendChild(memberSince);
@@ -53,7 +36,9 @@ const displayBusinesses = (businesses) => {
     card.appendChild(phone);
     card.appendChild(website);
     card.appendChild(membership);
+    card.appendChild(logo);
 
     cards.appendChild(card);
   });
 };
+getBusinessesData();

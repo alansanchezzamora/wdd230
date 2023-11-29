@@ -34,12 +34,12 @@
         <ul class="navigation">
             <li><a href="index.html" title="Home">Home</a></li>
             <li><a href="#" title="Discover" class="active">Discover</a></li>
-            <li><a href="#" title="Service">Services</a></li>
-            <li><a href="#" title="History">Products</a></li>
+            <li><a href="directory.html" title="Directory">Directory</a></li>
+            <li><a href="join.html" titl e="Join">Join</a></li>
             <li><a href="#" title="Contact">Contact Us</a></li>
         </ul>
     </nav>
-    <main>
+    <main id="main-discover">
         <aside>
             <div class="aside">
                 <h2>Overview </h2>
@@ -71,7 +71,7 @@
 
                 </p>
             </div>
-            <table>
+            <table id="statistics-table">
                 <thead>
                     <tr>
                         <th>Monterrey Statistics</th>
@@ -100,11 +100,13 @@
 
         </aside>
         <gallery class="gallery">
-            <span>
-                <p id="message"></p>
-            </span>
-            <h2><span class="label">Number of Visits: </span><span class="visits"></span></h2>
-            <h2>Monterrey Gallery</h2>
+            <div id="gallery-header">
+                <span>
+                    <p id="message"></p>
+                </span>
+                <h2><span class="label">Number of Visits: </span><span class="visits"></span></h2>
+                <h1>Monterrey Gallery</h1>
+                </div>
             <div>
                 <img class="discover-img" src="images/MTY4.webp" loading="lazy" alt="View from El Cerro de la Silla">
                 <figcaption>View from El Cerro de la Silla</figcaption>
@@ -118,10 +120,6 @@
                 <img class="discover-img" src="images/Skymty.webp" loading="lazy"
                     alt="SkyView from El Cerro de la Silla">
                 <figcaption>SkyView from El Cerro de la Silla</figcaption>
-            </div>
-            <div>
-                <img class="discover-img" src="images/discover-2.webp" loading="lazy" alt="Obispado Tower">
-                <figcaption>Obispado Tower</figcaption>
             </div>
             <div>
                 <img class="discover-img" src="images/og-mty.webp" loading="lazy" alt="San Agustin Zone">
@@ -138,6 +136,10 @@
             <div>
                 <img class="discover-img" src="images/image.webp" loading="lazy" alt="Monterrey Picture at night">
                 <figcaption>Gonzalitos Zone at night</figcaption>
+            </div>
+            <div>
+                <img class="discover-img" src="images/discover-2.webp" loading="lazy" alt="Obispado Tower">
+                <figcaption>Obispado Tower</figcaption>
             </div>
         </gallery>
     </main>
