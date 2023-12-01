@@ -14,29 +14,38 @@
   }
   #main-index {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(3,1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     grid-auto-rows: auto;
+    
+  }
+  #main-index > *{
+    padding: 10px;
   }
   .hero-container {
     grid-column: 1/4;
     grid-row: 1/3;
   }
+
+  #hero-image {
+    height: 100%;
+    width: fit-content;
+  }
   #current-events {
     grid-column: 4/5;
     grid-row: 3/4;
   }
-  #weather-card{
+  #weather-card {
     grid-column: 4/5;
     grid-row: 1/3;
   }
-  #spotlight-grid{
+  #spotlight-grid {
     grid-column: 1/4;
     grid-row: 3/4;
     display: flex;
   }
 
-  #index-content-grid{
+  #index-content-grid {
     grid-row: 1/4;
   }
   #contact-info img {
@@ -49,17 +58,17 @@
     display: flex;
     flex-direction: column;
   }
-#main-discover{
+  #main-discover {
     display: grid;
     grid-template-columns: 400px 1fr;
-}
+  }
   .gallery {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
     padding: 20px;
   }
-  #gallery-header{
+  #gallery-header {
     grid-column: 1/3;
     grid-row: 1/2;
     text-align: center;
@@ -68,12 +77,12 @@
     width: 100%;
     height: auto;
   }
-  #main-join{
+  #main-join {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
 
-  .grid-directory{
+  .grid-directory {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -81,21 +90,22 @@
   #current-events > * {
     margin: 0.2rem;
   }
-  #event-icon{
+  #event-icon {
     display: block;
     margin: auto;
   }
 
-  strong{
+  strong {
     font-weight: bolder;
     font-size: larger;
   }
-  .spotlight{
+  .spotlight {
     text-align: center;
   }
 
-  #company-spotlight3{
+  #company-spotlight3 {
     grid-column: 3/4;
     grid-row: 3/4;
   }
 }
+

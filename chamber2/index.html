@@ -46,11 +46,11 @@
             <picture>
                 <source media="(max-width: 37.5em)" srcset="images/hero-img-small.webp">
                 <source media="(max-width: 60em)" srcset="images/hero-img-medium.webp">
-                <img id="hero-image" src="images/hero-img-big.webp" alt="large hero image" loading="lazy" width="1125" height="750">
+                <img id="hero-image" src="images/hero-img-big.webp" alt="large hero image" loading="lazy">
             </picture>
             <h1 class="hero-text">Welcome</h1>
             <div class="call-to-action">
-                <button class="cta-button">Join Us Today</button>
+                <button onclick="redirect()" class="cta-button">Join Us Today</button>
             </div>
         </div>
         <section id="current-events">
@@ -139,6 +139,11 @@
             <h4>Calle 1 #123 Col Zona Centro Monterrey NL</h4>
             <h4>contact@mtychamber.com</h4>
             <h4>+(81)10042234</h4>
+            <ul class="social-icons">
+                <li><a href="https://www.facebook.com"><img src="images/facebook-icon.webp" alt="Facebook"></a></li>
+                <li><a href="https://www.twitter.com"><img src="images/twitter-icon.webp" alt="Twitter"></a></li>
+                <li><a href="https://www.linkedin.com"><img src="images/linkedin-icon.webp" alt="Linkedin"></a></li>
+            </ul>
 
         </div>
         <div class="google-map">
@@ -161,6 +166,7 @@
     <script src="scripts/weather.js"></script>
     <script src="scripts/darkMode.js"></script>
     <script src="scripts/visits.js"></script>
+    <script src="scripts/redirect.js"></script>
 </body>
 
 </html>
