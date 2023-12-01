@@ -97,4 +97,7 @@
     display: block;
     margin: auto;
   }
+  figcaption{
+    background-color: whitesmoke;
+  }
 }
