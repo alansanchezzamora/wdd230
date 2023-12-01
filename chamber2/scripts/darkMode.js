@@ -2,7 +2,6 @@ const modeButton = document.querySelector("#mode");
 const header = document.querySelector("header");
 const main = document.querySelector("main");
 const footer = document.querySelector("footer");
-const nav = document.querySelector("nav");
 const menu = document.querySelector(".navigation");
 
 modeButton.addEventListener("click", () => {
@@ -11,6 +10,7 @@ modeButton.addEventListener("click", () => {
     header.style.background = "#000";
     footer.style.background = "#000";
     menu.style.background = "#000";
+
     modeButton.textContent = "Light Mode 💡";
   } else {
     main.style.background = "#fff";
