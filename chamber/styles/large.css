@@ -111,6 +111,11 @@
     grid-column: 3/4;
     grid-row: 3/4;
   }
+
+  .hero-text{
+    color: #000;
+    text-align: center;
+  }
 }
 
 

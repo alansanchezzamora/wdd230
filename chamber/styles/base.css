@@ -51,10 +51,11 @@ section {
 .hero-text {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 0px;
   padding: 20px;
   color: #fff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: whitesmoke;
 }
 .call-to-action {
   position: absolute;
