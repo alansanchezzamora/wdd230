@@ -1,52 +1,77 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-
-    <!-- This start file was build by Paul Cheney  -->
-    <title>HTML5 Start Site by Paul Cheney</title>
-
-    <meta name="description" content="Fill Me In">
-    <meta name="author" content="John Doe">
-
-    <link href="styles/normalize.css" rel="stylesheet">
-    <link href="styles/base.css" rel="stylesheet">
-    <link href="styles/larger.css" rel="stylesheet">
-
+    <meta property="og:title" content="Monterrey Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image"
+        content="https://github.com/alansanchezzamora/wdd230/blob/70942a5a163c936b0c7b5acb3cefa987e855c5af/chamber2/images/og-mty.jpg">
+    <meta property="og:url" content="https://lmhprap.github.io/wdd230/chamber/index.html">
+    <meta name="author" content="Alan Sanchez Zamora">
+    <meta name="description" content="Monterrey Nuevo Leon Chamber of Commerce, join us!">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Monterrey Chamber of Commerce Site</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/normal.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="icon" href="images/favicon.ico">
 </head>
 
 <body>
     <header>
-        <h1>Course Proposal</h1>
-        <h2>Designing Web Forms</h2>
+        <div id="logo">
+            <img id="img-header" src="images/logo-nl1.webp" alt="Monterrey Logo">
+        </div>
+        <h4 id="currentDate"></h4>
+        <div id="mode">
+            <em> Dark Mode</em>🌝
+        </div>
     </header>
-
-    <nav class="clearfix">
-        <ul>
-            <li><a href="#">About</a></li>
-            <li class="active"><a href="#">Propose</a></li>
-            <li><a href="#">Winners</a></li>
-            <li><a href="#">Contact</a></li>
+    <nav id="nav-menu">
+        <button id="menu"></button>
+        <ul class="navigation">
+            <li><a href="index.html" title="Home">Home</a></li>
+            <li><a href="discover.html" title="Discover">Discover</a></li>
+            <li><a href="directory.html" title="Directory">Directory</a></li>
+            <li><a href="#" title="Join" class="active">Join</a></li>
         </ul>
     </nav>
-
-
-    <main>
-        <h1>Course Proposal Application</h1>
-        <p>Thanks for applying to create a course for our online library. We will get back to you
-            within a week with a response.</p>
-
-
+    <main id=thank-you>
+        <h1>Welcome!</h1>
+        <h4>We hope this is the begining of a lifelong prosper business relationship!</h4>
+        <h4>We'll be in contact to the phone and mail address provided</h4>
 
     </main>
-
     <footer>
-        &copy; &bull; Paul Cheney &bull; 123-555-6789
+        <div id="contact-info">
+            <img id="footer-img" src="images/logo-nl.webp" loading="lazy" alt="Monterrey Logo">
+            <h2>Monterrey Chamber of Commerce</h2>
+            <h4>Calle 1 #123 Col Zona Centro Monterrey NL</h4>
+            <h4>contact@mtychamber.com</h4>
+            <h4>+(81)10042234</h4>
+
+        </div>
+        <div class="google-map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d230187.00306399795!2d-100.4679068735161!3d25.649011979312956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86629531b437f8f5%3A0xa3d3d3ca6ac89894!2sMonterrey%2C%20N.L.!5e0!3m2!1ses-419!2smx!4v1695943508451!5m2!1ses-419!2smx"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div id="dev-info">
+            <hr>
+            <p>&copy 2023 Monterrey Chamber</p>
+            <p>Alan Jared Sánchez Zamora</p>
+            <p>WDD230 Project</p>
+            <div id="lastModified"></div>
+        </div>
     </footer>
-    <script src="scripts/scripts.js"></script>
+    <script src="scripts/getdates.js"></script>
+    <script src="scripts/currentDate.js"></script>
+    <script src="scripts/hamMenu.js"></script>
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/visits.js"></script>
 </body>
 
 </html>
