@@ -23,32 +23,120 @@
 <body>
     <header>
         <div id="logo">
-            <img id="img-header" src="images/logo-nl1.webp" alt="Monterrey Logo">
+            <img id="img-header" src="images/scoots-logo.png" alt="Scoots Logo">
         </div>
-        <h4 id="currentDate">-</h4>
+        <div>
+            <img class="social-media" src="images/facebook-icon.webp" alt="Facebook Icon">
+            <img class="social-media" src="images/twitter-icon.webp" alt="Twitter Icon">
+            <img class="social-media" src="images/instagram-icon.webp" alt="Instagram Icon">
+        </div>
     </header>
     <nav id="nav-menu">
         <button id="menu"></button>
         <ul class="navigation">
             <li><a href="#" title="Home" class="active">Home</a></li>
-            <li><a href="discover.html" title="Discover">Discover</a></li>
-            <li><a href="directory.html" title="Directory">Directory</a></li>
-            <li><a href="join.html" title="Join">Join</a></li>
+            <li><a href="rentals.html" title="Rentals">Rentals</a></li>
+            <li><a href="reservations.html" title="Reservations">Reservations</a></li>
+            <li><a href="contact.html" title="Contact">Contact</a></li>
         </ul>
     </nav>
-
-
-
     <main id="main-index">
+        <div class="hero-container">
+            <picture>
+                <source media="(max-width: 37.5em)" srcset="images/hero-small.webp">
+                <source media="(max-width: 60em)" srcset="images/hero-medium.webp">
+                <img id="hero-image" src="images/hero-large.webp" alt="large hero image" loading="lazy">
+            </picture>
+            <h1 class="hero-text">Discover Cozumel! </h1>
+            <div class="call-to-action">
+                <button onclick="redirect()" class="cta-button">Make your reservation</button>
+            </div>
+        </div>
+        <section id="weather-card">
+            <h2> Weather Information</h2>
+            <h4 id="weather-city"></h4>
+            <div class="weather">
+                <h4>Today</h4>
+                <h4><span id="current-temp"></span> </h4>
+                <figure>
+                    <img id="weather-icon" alt="Weather Icon">
+                    <figcaption id="fig1" class="weather-fig-captions"></figcaption>
+                </figure>
+                <h5>Humidity</h5>
+                <figcaption id="fig2" class="weather-fig-captions"></figcaption>
+            </div>
+            <div>
+                <h2>Weather Forecast</h2>
+                <h4><span id="forecast-day-1"></span> </h4>
+                <h4><span id="forecast-temp-1"></span> </h4>
+                <figure>
+                    <img id="weather-icon1" class="w-icon" alt="weather icon">
+                    <figcaption id="fig2" class="weather-fig-captions"></figcaption>
+                </figure>
+            </div>
+        </section>
+        <div id="rental-types">
+            <h2 class="rental-types-tag">Scooters</h2>
+            <div>
+                <p>Honda Metropolitan</p>
+                <p>49cc</p>
+                <p>1 person</p>
+            </div>
+            <div>
+                <img src="images/honda-metropolitan.png" alt="Honda-Metropolitan">
+            </div>
+            <div>
+                <p>Honda Dio</p>
+                <p>110cc</p>
+                <p>2 person</p>
+            </div>
+            <div>
+                <img src="images/Honda-DIO.png" alt="Honda-Metropolitan">
+            </div>
+            <div>
+                <p>Honda PCX150
+                </p>
+                <p>149cc</p>
+                <p>2 person</p>
+            </div>
+            <div>
+                <img src="images/honda-pcx150.png" alt="Honda-Metropolitan">
+            </div>
+            <h2 class="rental-types-tag">ATVs</h2>
 
+            <div>
+                <p>Honda Pioneer 1000</p>
+                <p>4 person</p>
+            </div>
+            <div>
+                <img src="images/Honda-Pioneer-1000.webp" alt="Honda Pioneer 1000">
+            </div>
+            <h2 class="rental-types-tag">Jeeps</h2>
+            <div>
+                <p>Jeep Wrangler - 4 door manuel with A/C</p>
+                <p>5 person</p>
+            </div>
+            <div>
+                <img src="images/Jeep-Wrangler-4-Door.png" alt="4 door Jeep Wrangler">
+            </div>
+            <div>
+                <p>Jeep Wrangler - 2 door - open air - manuel</p>
+                
+                <p>4 person</p>
+                </div>
+                <div>
+                    <img src="images/2-door-2016-jeep-wrangler.png" alt="2 door - Jeep Wrangler">
+                </div>
+
+        </div>
     </main>
     <footer>
         <div id="contact-info">
-            <img id="footer-img" src="images/logo-nl.webp" loading="lazy" alt="Monterrey Logo">
-            <h2>Monterrey Chamber of Commerce</h2>
-            <h4>Calle 1 #123 Col Zona Centro Monterrey NL</h4>
-            <h4>contact@mtychamber.com</h4>
-            <h4>+(81)10042234</h4>
+            <img id="footer-img" src="images/scoots-logo.png" loading="lazy" alt="Monterrey Logo">
+            <h4>Cozumel, México </h4>
+            <h4>Contact us! </h4>
+            <h4>+52 999-91-24</h4>
+
 
         </div>
         <div class="google-map">
@@ -65,7 +153,8 @@
             <div id="lastModified"></div>
         </div>
     </footer>
-
+    <script src="scripts/hamMenu.js"></script>
+    <script src="scripts/weather.js"></script>
 </body>
 
 </html>
