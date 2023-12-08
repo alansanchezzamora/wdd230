@@ -1,76 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 10px;
-        }
-
-        .social-icons img {
-            width: 20px;
-            height: 20px;
-        }
-
-        nav {
-            display: flex;
-            gap: 20px;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        #logo {
-            max-width: 100px;
-            /* Adjust as needed */
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dynamic Table</title>
+<style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+</style>
 </head>
-
 <body>
+<script>
+    // Sample data
+    var data = [
+        { Name: 'John Doe', Age: 25, City: 'New York' },
+        { Name: 'Jane Doe', Age: 30, City: 'San Francisco' },
+        { Name: 'Bob Smith', Age: 22, City: 'Los Angeles' }
+    ];
 
-    <header>
-        <div class="social-icons">
-            <a href="https://twitter.com/example" target="_blank" rel="noopener noreferrer"><img src="twitter-icon.png"
-                    alt="Twitter"></a>
-            <a href="https://www.facebook.com/example" target="_blank" rel="noopener noreferrer"><img
-                    src="facebook-icon.png" alt="Facebook"></a>
-            <a href="https://www.instagram.com/example" target="_blank" rel="noopener noreferrer"><img
-                    src="instagram-icon.png" alt="Instagram"></a>
-            <!-- Add more social media links as needed -->
-        </div>
+    // Create a table element
+    var table = document.createElement('table');
 
-        <img src="your-logo.png" alt="Your Logo" id="logo">
+    // Create table header
+    var thead = document.createElement('thead');
+    var headerRow = thead.insertRow();
+    Object.keys(data[0]).forEach(function (key) {
+        var th = document.createElement('th');
+        th.textContent = key;
+        headerRow.appendChild(th);
+    });
+    table.appendChild(thead);
 
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Rentals</a>
-            <a href="#">Reservations</a>
-            <a href="#">Contact</a>
-        </nav>
-    </header>
+    // Create table body
+    var tbody = document.createElement('tbody');
+    data.forEach(function (rowData) {
+        var row = tbody.insertRow();
+        Object.values(rowData).forEach(function (value) {
+            var cell = row.insertCell();
+            cell.textContent = value;
+        });
+    });
+    table.appendChild(tbody);
 
-    <!-- Your content goes here -->
+    // Append the table to the body
+    document.body.appendChild(table);
+</script>
 
 </body>
-
 </html>

@@ -5,11 +5,11 @@ const cards = document.querySelector("#cards");
 async function getVehicleData() {
   const response = await fetch(url);
   const data = await response.json();
-  //console.table(data.prophets);
-  displayProphets(data.vehicles);
+  console.table(data.vehicles);
+  displayVehicles(data.vehicles);
 }
 
-const displayProphets = (vehicles) => {
+const displayVehicles = (vehicles) => {
   vehicles.forEach((vehicle) => {
     let card = document.createElement("section");
     let name = document.createElement("h2");
@@ -19,12 +19,16 @@ const displayProphets = (vehicles) => {
     let fullWalk = document.createElement("h4");
 
     name.textContent = `${vehicle.type}`;
-    halfReserv.textContent = `${vehicle.half - day - reserv - price}`;
+    halfReserv.textContent = `${vehicle.halfDayReserv}`;
+    fullReserv.textContent = `${vehicle.fullDayReserv}`;
+    halfWalk.textContent = `${vehicle.halfDayWalkin}`;
+    fullWalk.textContent = `${vehicle.fullDayWalkin}`;
 
     card.appendChild(name);
-    card.appendChild(birthDate);
-    card.appendChild(birthPlace);
-    card.appendChild(portrait);
+    card.appendChild(halfReserv);
+    card.appendChild(fullReserv);
+    card.appendChild(halfWalk);
+    card.appendChild(fullWalk);
 
     cards.appendChild(card);
   });
