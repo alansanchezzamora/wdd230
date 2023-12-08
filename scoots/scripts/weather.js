@@ -8,6 +8,7 @@ const forecastTemp1 = document.querySelector("#forecast-temp-1");
 const weatherIcon1 = document.querySelector("#weather-icon1");
 const captionDesc1 = document.querySelector("#fig2");
 const forecastday1 = document.querySelector("#forecast-day-1");
+const maxTemp = document.querySelector("#max-temp");
 
 const url = `https://api.openweathermap.org/data/2.5/weather?lat=20.48&lon=-86.93&appid=82b9407b7b6d113e077d354c4b29fe74&units=metric`;
 const url1 = `https://api.openweathermap.org/data/2.5/forecast?lat=20.48&lon=-86.93&appid=82b9407b7b6d113e077d354c4b29fe74&units=metric`;
@@ -36,6 +37,7 @@ function displayResults(data) {
   captionDesc.textContent = `${desc}`;
   currentHumidity.innerHTML = `${data.main.humidity}%`;
   city.innerHTML = `${data.name}, ${data.sys.country}`;
+  maxTemp.innerHTML = `${data.main.temp_max.toFixed(1)}&deg;C`;
 }
 
 async function forecastapiFetch() {
@@ -54,7 +56,7 @@ async function forecastapiFetch() {
 }
 
 function displayForecast(data) {
-  forecastTemp1.innerHTML = `${data.list[6].main.temp.toFixed(1)}&deg;C`;
+  forecastTemp1.innerHTML = `${data.list[4].main.temp.toFixed(1)}&deg;C`;
   const iconsrc = `https://openweathermap.org/img/w/${data.list[6].weather[0].icon}.png`;
   let desc1 = data.list[6].weather[0].description;
   weatherIcon1.setAttribute("src", iconsrc);
@@ -78,6 +80,17 @@ function forecastdates() {
 
   forecastday1.innerHTML = `${daysOfWeek[(todayIndex + 1) % 7]}`;
 }
+
+function closeBanner() {
+  const banner = document.getElementById("announcementBanner");
+  banner.style.display = "none";
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const banner = document.getElementById("announcementBanner");
+  banner.style.display = "flex";
+});
+
 weatherapiFetch();
 forecastapiFetch();
 forecastdates();

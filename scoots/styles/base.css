@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
 body {
@@ -218,3 +219,28 @@ figcaption {
   width: 100%;
 }
 
+
+/*----------------------- Announcement Banner------------------*/
+.announcement-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.close-button {
+  cursor: pointer;
+  padding: 5px;
+  background-color: #fff;
+  color: #4CAF50;
+  border: none;
+  border-radius: 3px;
+  font-weight: bold;
+}
