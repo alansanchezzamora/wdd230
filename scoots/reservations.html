@@ -37,10 +37,30 @@
         </ul>
     </nav>
 
-
-
     <main id="main-index">
+        <form method="get" action="thank-you.html">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label class="top"> Phone*<input type="tel" name="Phone" required></label>
+                <label class="top"> Name*<input type="text" name="rdate" required></label>
+                <label class="top"> email*<input type="email" name="email" required placeholder="hello@company.com"></label>
+                <label class="top"> Home State or Country*<input type="text" name="country" required></label>
 
+                <label class="top"> Cruise Line<input type="text" name="cruiseLine"></label>
+                
+                </fieldset>
+                <fieldset>
+                    <legend>Reservation</legend>
+                    <label class="top"> Reserve Date*<input type="text" name="rdate" required></label>
+                    <label class="top"> Period*<input type="text" name="period" required></label>
+                    <label class="top"> Rental Type*<input type="text" name="rType" required></label>
+                </fieldset>
+                <fieldset>
+                    <legend>Comments</legend>
+                    <label class="top"> Special/Accommodations<input type="text" name="cruiseLine"></label>
+                </fieldset>
+                <input type="submit" value="Join Us" class="submitBtn">
+                </form>
     </main>
     <footer>
         <div id="contact-info">
