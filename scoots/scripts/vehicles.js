@@ -2,7 +2,7 @@ const url =
   "https://raw.githubusercontent.com/alansanchezzamora/wdd230/main/scoots/data/vehicles.json";
 const cards = document.querySelector("#cards");
 
-async function getProphetData() {
+async function getVehicleData() {
   const response = await fetch(url);
   const data = await response.json();
   //console.table(data.prophets);
@@ -18,19 +18,10 @@ const displayProphets = (vehicles) => {
     let halfWalk = document.createElement("h4");
     let fullWalk = document.createElement("h4");
 
-    fullName.textContent = `${vehicle.rental - type}`;
+    name.textContent = `${vehicle.type}`;
+    halfReserv.textContent = `${vehicle.half - day - reserv - price}`;
 
-    portrait.setAttribute("src", prophet.imageurl);
-    portrait.setAttribute("alt", `Portrait of ${prophet.fullName}`);
-    portrait.setAttribute("loading", "lazy");
-    portrait.setAttribute("width", "340");
-    portrait.setAttribute("height", "440");
-
-    birthDate.textContent = `Date of birth: ${prophet.birthdate}`;
-
-    birthPlace.textContent = `Place of birth : ${prophet.birthplace}`;
-
-    card.appendChild(fullName);
+    card.appendChild(name);
     card.appendChild(birthDate);
     card.appendChild(birthPlace);
     card.appendChild(portrait);
@@ -38,4 +29,4 @@ const displayProphets = (vehicles) => {
     cards.appendChild(card);
   });
 };
-getProphetData();
+getVehicleData();
