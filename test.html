@@ -3,32 +3,78 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Catchy Button</title>
+  <link rel="stylesheet" href="styles.css">
+  <title>Visually Appealing Grid Content</title>
+  </head>
+  
+  <body>
+    <div class="grid-container">
+      <div class="grid-item">
+        <img src="image1.jpg" alt="Image 1">
+        <h2>Title 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.</p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="grid-item">
+        <img src="image2.jpg" alt="Image 2">
+        <h2>Title 2</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.</p>
+        <a href="#">Read More</a>
+      </div>
+    </div>
+
   <style>
-    .catchy-button {
-      display: inline-block;
-      padding: 10px 20px;
-      font-size: 16px;
-      font-weight: bold;
-      text-align: center;
-      text-decoration: none;
-      cursor: pointer;
-      border: 2px solid #FFA500;
-      color: #FFFFFF;
-      background-color: #FFA500;
-      border-radius: 5px;
-      transition: background-color 0.3s, color 0.3s;
-    }
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
 
-    .catchy-button:hover {
-      background-color: #FFFFFF;
-      color: #FFA500;
-    }
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.grid-item {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.grid-item img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.grid-item h2 {
+  color: #333;
+}
+
+.grid-item p {
+  color: #666;
+  line-height: 1.4;
+}
+
+.grid-item a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.grid-item a:hover {
+  background-color: #2980b9;
+}
   </style>
-</head>
-<body>
-
-  <a href="#" class="catchy-button">Discover Now!</a>
-
 </body>
 </html>

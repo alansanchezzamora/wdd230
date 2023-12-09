@@ -11,6 +11,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
 header img {
@@ -23,7 +24,7 @@ footer img {
 }
 /* --------- Header --------- */
 header {
-  background-color: #333;
+
   color: #fff;
   text-align: center;
   padding: 10px;
@@ -32,6 +33,7 @@ header {
   flex-flow: wrap;
   align-items: center;
   justify-content: space-around;
+  background-image: "https://raw.githubusercontent.com/alansanchezzamora/wdd230/main/scoots/images/jeep-2.webp";
 }
 
 .social-media{
@@ -109,8 +111,8 @@ header {
 }
 /*FOOTER GRID*/
 footer {
-  background-color: #333;
-  color: #fff;
+  background-color: whitesmoke;
+  color: rgb(0, 153, 255);
   text-align: center;
   padding: 10px;
   bottom: 0;
@@ -157,8 +159,9 @@ footer {
   display: flex;
   flex-direction: column;
   list-style: none;
-  background-color: #333;
+  border: #000;
   color: #fff;
+  background-color: whitesmoke;
 }
 .navigation li {
   display: none;
@@ -168,11 +171,13 @@ footer {
   padding: 1rem;
   text-align: center;
   text-decoration: none;
-  color: #fff;
+  color: rgb(0, 153, 255);
+  font-size:larger;
+
 }
 .navigation li a:hover {
   background-color: #bbb;
-  color: #333;
+  color: rgb(0, 3, 184);
   font-weight: 700;
 }
 
@@ -197,9 +202,57 @@ footer {
   height: 100vh;
 }
 
+/*Weather Index*/
+#weather h2,h4{
+  text-align: center;
+}
+.weather-card{
+  
+  text-align: center;
+  margin-bottom: 10px;
+  outline: solid 2px #000;
+  transition: outline 0.6s linear;
+  margin: 0.5em; 
+  border-radius: 10px;
+}
 
+.weather-card:hover { border-width: 10px; }
 
-/* TABLE */
+/*index table*/
+.styled-list li {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease-in-out;
+  margin-bottom: 10px;
+}
+
+.styled-list li:hover {
+  background-color: #2980b9;
+}
+
+.rental-types-tag{
+  background-color:#3498db;
+  color: ora;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 3px;
+}
+/* Summary in Index */
+#rental-types{
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+#rental-types div{
+  text-align: center;
+justify-content: center;
+}
+/* TABLE in Rentals*/
 table {
   border-collapse: collapse;
   width: 100%;

@@ -42,7 +42,7 @@
     padding: 20px;
   }
   .gallery img:hover {
-    box-shadow: 0 0 50px #333
+    box-shadow: 0 0 50px #333;
   }
   aside {
     background-color: #f4f4f4;
@@ -50,12 +50,12 @@
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     top: 0;
   }
-  #main-join{
+  #main-join {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     grid-template-rows: 1fr 1fr;
   }
-  #aside-join{
+  #aside-join {
     grid-column: 1/2;
     grid-row: 1/3;
   }
@@ -74,32 +74,55 @@
     padding: 0.25rem;
     width: 100%;
   }
-  .grid-directory{
+  .grid-directory {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
 
-  #weather-forecast{
+  #weather-forecast {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
-  #main-index{
+  #main-index {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-  #company-spotlight3{
+  #company-spotlight3 {
     grid-column: 1/3;
   }
   #current-events > * {
     margin: 0.2rem;
   }
-  #event-icon{
+  #event-icon {
     display: block;
     margin: auto;
   }
-  figcaption{
+  figcaption {
     background-color: #f9f9f9;
     max-width: fit-content;
     margin: auto;
+  }
+
+  /*Grid Medium View Index*/
+  #weather {
+    grid-column: 2/3;
+  }
+  #company {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  #rental-types {
+    grid-row: 2/3;
+    grid-column: 2/3;
+  }
+  aside{
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      padding: 20px;
+  }
+  #contact-info img{
+    width: 200px;
+    height: auto;
   }
 }
