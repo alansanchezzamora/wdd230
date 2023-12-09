@@ -19,7 +19,7 @@ const displayVehicles = (vehicles) => {
     let fullWalk = document.createElement("td");
 
     name.textContent = `${vehicle.type}`;
-    halfReserv.textContent = `Half day price ${vehicle.halfDayReserv}`;
+    halfReserv.textContent = `${vehicle.halfDayReserv}`;
     fullReserv.textContent = `${vehicle.fullDayReserv}`;
     halfWalk.textContent = `${vehicle.halfDayWalkin}`;
     fullWalk.textContent = `${vehicle.fullDayWalkin}`;
