@@ -252,12 +252,19 @@ footer {
   text-align: center;
 justify-content: center;
 }
+
 /* TABLE in Rentals*/
-table {
+
+.rentals{
+  text-align: center;
+  border-bottom: 100px;
+}
+#table {
+
   border-collapse: collapse;
   width: 100%;
-  margin-top: 20px;
   padding: 20px;
+  margin: auto;
 }
 
 th,
@@ -273,7 +280,24 @@ th {
 figcaption {
   width: 100%;
 }
+.catchy-button {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #3498db;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
 
+.catchy-button:hover {
+  background-color: #2980b9;
+}
 
 /*----------------------- Announcement Banner------------------*/
 .announcement-banner {
