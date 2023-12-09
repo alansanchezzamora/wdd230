@@ -24,12 +24,13 @@ const displayVehicles = (vehicles) => {
     halfWalk.textContent = `${vehicle.halfDayWalkin}`;
     fullWalk.textContent = `${vehicle.fullDayWalkin}`;
 
+    name.style.fontWeight = "bold";
     tentry.appendChild(name);
     tentry.appendChild(halfReserv);
     tentry.appendChild(fullReserv);
     tentry.appendChild(halfWalk);
     tentry.appendChild(fullWalk);
-
+    
     table.appendChild(tentry);
   });
 };
