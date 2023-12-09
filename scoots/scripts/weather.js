@@ -6,7 +6,7 @@ const city = document.querySelector("#weather-city");
 
 const forecastTemp1 = document.querySelector("#forecast-temp-1");
 const weatherIcon1 = document.querySelector("#weather-icon1");
-const captionDesc1 = document.querySelector("#fig2");
+const captionDesc1 = document.querySelector("#fig3");
 const forecastday1 = document.querySelector("#forecast-day-1");
 const maxTemp = document.querySelector("#max-temp");
 

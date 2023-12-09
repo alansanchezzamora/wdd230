@@ -1,6 +1,14 @@
 {
     "vehicles": [
         {
+            "type": "Vehicle Type",
+            "capacity": "Max Persons",
+            "halfDayReserv": "Half Day(3 hrs)",
+            "fullDayReserv": "Full Day",
+            "halfDayWalkin": "Half Day(3 hrs)",
+            "fullDayWalkin": "Full Day"
+        },
+        {
             "type": "Honda Metro Scooter",
             "capacity": 1,
             "halfDayReserv": "$20",

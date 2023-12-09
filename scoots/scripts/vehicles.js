@@ -1,6 +1,6 @@
 const url =
   "https://raw.githubusercontent.com/alansanchezzamora/wdd230/main/scoots/data/vehicles.json";
-const cards = document.querySelector("#cards");
+const table = document.querySelector("#table");
 
 async function getVehicleData() {
   const response = await fetch(url);
@@ -11,26 +11,26 @@ async function getVehicleData() {
 
 const displayVehicles = (vehicles) => {
   vehicles.forEach((vehicle) => {
-    let card = document.createElement("section");
-    let name = document.createElement("h2");
-    let halfReserv = document.createElement("h4");
-    let fullReserv = document.createElement("h4");
-    let halfWalk = document.createElement("h4");
-    let fullWalk = document.createElement("h4");
+    let tentry = document.createElement("tr");
+    let name = document.createElement("td");
+    let halfReserv = document.createElement("td");
+    let fullReserv = document.createElement("td");
+    let halfWalk = document.createElement("td");
+    let fullWalk = document.createElement("td");
 
     name.textContent = `${vehicle.type}`;
-    halfReserv.textContent = `${vehicle.halfDayReserv}`;
+    halfReserv.textContent = `Half day price ${vehicle.halfDayReserv}`;
     fullReserv.textContent = `${vehicle.fullDayReserv}`;
     halfWalk.textContent = `${vehicle.halfDayWalkin}`;
     fullWalk.textContent = `${vehicle.fullDayWalkin}`;
 
-    card.appendChild(name);
-    card.appendChild(halfReserv);
-    card.appendChild(fullReserv);
-    card.appendChild(halfWalk);
-    card.appendChild(fullWalk);
+    tentry.appendChild(name);
+    tentry.appendChild(halfReserv);
+    tentry.appendChild(fullReserv);
+    tentry.appendChild(halfWalk);
+    tentry.appendChild(fullWalk);
 
-    cards.appendChild(card);
+    table.appendChild(tentry);
   });
 };
 getVehicleData();
