@@ -45,8 +45,9 @@
         <form method="get" action="thank-you.html">
             <fieldset>
                 <legend>Personal Information</legend>
-                <label class="top"> Phone*<input type="tel" name="Phone" required></label>
                 <label class="top"> Name*<input type="text" name="rdate" required></label>
+                <label class="top"> Phone*<input type="tel" name="Phone" placeholder="(81) 1234-56-78" required></label>
+
                 <label class="top"> email*<input type="email" name="email" required placeholder="hello@company.com"></label>
                 <label class="top"> Home State or Country*<input type="text" name="country" required></label>
 
@@ -54,19 +55,20 @@
             </fieldset>
             <fieldset>
                 <legend>Reservation</legend>
-                <label class="top"> Reserve Date*<input type="text" name="rdate" required></label>
+                <label class="top"> Reserve Date*<input type="date" name="rdate" required></label>
                 <label class="top"> Period*<input type="text" name="period" required></label>
                 <label class="top"> Rental Type*<input type="text" name="rType" required></label>
             </fieldset>
             <fieldset>
                 <legend>Comments</legend>
-                <label class="top"> Special/Accommodations<input type="text" name="cruiseLine"></label>
+                <label class="top"> Special/Accommodations<input type="text" name="cruiseLine"
+                        placeholder="ex. location of a drop-off request"></label>
             </fieldset>
             <input type="submit" value="Join Us" class="submitBtn">
             </form>
         <div>
-            <h2>Rental agreement information</h2>
-            <ul>
+            <h2 id="reservations-title">Rental agreement information</h2>
+            <ul class="styled-list2">
                 <li>A $50 security deposit is required to confirm reservations.</li>
                 <li>A valid drivers license is required in hand at the time of rental.</li>
                 <li>No one under the age of 12 years of age are allowed to ride on the scooters.</li>

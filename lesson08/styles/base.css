@@ -12,8 +12,6 @@ body {
 }
 
 
-
-}
 /*----------- MAIN --------------*/
 main {
     padding: 0 2%;
@@ -24,7 +22,7 @@ main {
 form fieldset {
     margin: 2rem 0;
     border: 1pc solid #445ba9;
-    border-radius: 10px;
+    border-radius: 20px;
     padding: 0.5rem 2%;
 }
 form legend{
