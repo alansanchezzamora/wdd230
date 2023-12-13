@@ -1,53 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JSON to HTML Table</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Alan Sánchez Zamora - WDD 230 - Web Frontend Development</title>
+  <meta name="description"
+    content=" The WDDe 230 - Web Frontend Development course assignment portal by Alan Jared Sánchez Zamora to add all works related to this topic. ">
+  <meta name="author" content="Alan Sánchez Zamora">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <link rel="icon" href="images/favicon.ico">
+  
+  <!--  Essential META Tags -->
+  <meta property="og:title" content="WDD 230 - Web Frontend Development Site">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://raw.githubusercontent.com/alansanchezzamora/wdd230/main/images/wdd230.png">
+  <meta property="og:image:width" content="1200px">
+  <meta property="og:image:height" content="630px">
+  <meta property="og:url" content="https://alansanchezzamora.github.io/wdd230">
+  <meta name="twitter:card" content="summary_large_image">
   </head>
   
   <body>
+  <header>
+    <img id="header-picture" src="images/myphoto.webp" alt="picture">
+    <h1 class="112">Alan Jared Sánchez Zamora</h1>
+  </header>
+  <nav>
+    <button id="menu"></button>
+    <ul class="navigation">
+      <li><a class="active" href="#">Home</a></li>
+      <li><a href="chamber/siteplan.html">Site Plan</a></li>
+      <li><a href="chamber/">Chamber</a></li>
+      <li><a href="https://www.byui.edu/" target="_blank">BYU-Idaho</a></li>
+      <li>
+        <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng&id=p10#p10"
+          target="_blank">Scripture</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="hero-image">
+    <div class="hero-text">
+      <h1>Tijuana Mexico Temple</h1>
+    </div>
+  </div>
+  <main>
+    <div id="main-grid-title">
+      <h2>WDD 230: Web Frontend Development</h2>
+      <hr class="solid">
+    </div>
+    <section id="cards">
+      <h3>Learning activities:</h3>
+      <ul class="card-grid">
+        <li>01: <a href="lesson01/holygrail.html" target="_blank">Holy Grail</a>| <a
+            href="https://codepen.io/Alan-S-nchez-the-flexboxer/pen/GRPMpVE" target="_blank">CodePen</a> | <a
+            href="lesson01/media-query.html" target="_blank">CSS Media query</a></li>
+      </ul>
+    </section>
+    <section>
+      <p>The current temperature in Monterrey, Mexico is <span id="current-temp"></span></p>
+      <figure>
+        <img id="weather-icon" alt="Weather Icon API">
+        <figcaption></figcaption>
+      </figure>
+    </section>
+    <div class="google-map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d230187.00306399795!2d-100.4679068735161!3d25.649011979312956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86629531b437f8f5%3A0xa3d3d3ca6ac89894!2sMonterrey%2C%20N.L.!5e0!3m2!1ses-419!2smx!4v1695943508451!5m2!1ses-419!2smx"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; <span id="yearDate"></span> </p>
+    <p>Alan Sánchez</p>
+    <p>Monterrey, México</p>
+    <div id="lastModified"></div>
+  </footer>
+  <script src="scripts/getdates.js"></script>
+  <script>src = "scripts/links.js"</script>
+  </body>
 
-<h2>Table from JSON</h2>
-<table id="dataTable" border="1">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Age</th>
-      <th>City</th>
-    </tr>
-  </thead>
-  <tbody>
-    <!-- Table content will be inserted here -->
-  </tbody>
-</table>
-
-<script>
-  // Fetch JSON data
-  fetch('data.json')
-    .then(response => response.json())
-    .then(data => {
-      // Reference to the table body
-      const tableBody = document.querySelector('#dataTable tbody');
-
-      // Loop through the JSON data and populate the table
-      data.forEach(entry => {
-        // Create a new row
-        const row = document.createElement('tr');
-
-        // Create cells and populate them with data
-        Object.values(entry).forEach(value => {
-          const cell = document.createElement('td');
-          cell.textContent = value;
-          row.appendChild(cell);
-        });
-
-        // Append the row to the table body
-        tableBody.appendChild(row);
-      });
-    })
-    .catch(error => console.error('Error fetching JSON:', error));
-</script>
-
-</body>
 </html>
