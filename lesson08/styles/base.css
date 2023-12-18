@@ -1,3 +1,10 @@
+:root {
+    --primary-color: #445ba9;      /* Define a variable for the primary color */
+    --font-family: 'Arial', sans-serif;  /* Define a variable for the font family */
+    --border-radius: 20px;         /* Define a variable for border radius */
+  }
+  
+
 /* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
 html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 
@@ -21,12 +28,13 @@ main {
 /*-------------FORM----------------*/
 form fieldset {
     margin: 2rem 0;
-    border: 1pc solid #445ba9;
-    border-radius: 20px;
+    border: 1pc solid var(--primary-color);
+    border-radius: var(--border-radius);
     padding: 0.5rem 2%;
+    font-family: var(--font-family);
 }
 form legend{
-    color: #445ba9;
+    color: var(--primary-color);
     margin: 0 1rem;
     padding: 0.5rem;
     

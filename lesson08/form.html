@@ -1,73 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Alan Sánchez Zamora - WDD 230 - Web Frontend Development</title>
-    <meta name="description"
-        content=" The WDDe 230 - Web Frontend Development course assignment portal by Alan Jared Sánchez Zamora to add all works related to this topic. ">
-    <meta name="author" content="Alan Sánchez Zamora">
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/larger.css">
-    <link rel="icon" href="images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="John Doe">
+    <meta name="description" content="Fill Me In">
 
-    <!--  Essential META Tags -->
-    <meta property="og:title" content="WDD 230 - Web Frontend Development Site">
-    <meta property="og:type" content="website">
-    <meta property="og:image"
-        content="https://raw.githubusercontent.com/alansanchezzamora/wdd230/main/images/wdd230.png">
-    <meta property="og:image:width" content="1200px">
-    <meta property="og:image:height" content="630px">
-    <meta property="og:url" content="https://alansanchezzamora.github.io/wdd230">
-    <meta name="twitter:card" content="summary_large_image">
+    <link href="styles/normalize.css" rel="stylesheet">
+    <link href="styles/base.css" rel="stylesheet">
+    <link href="styles/larger.css" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <img id="header-picture" src="images/myphoto.webp" alt="picture">
-        <h1 class="112">Alan Jared Sánchez Zamora</h1>
+        <div id="formmessage"></div>
     </header>
-    <nav>
-        <button id="menu"></button>
-        <ul class="navigation">
-            <li><a class="active" href="#">Home</a></li>
-            <li><a href="chamber/siteplan.html">Site Plan</a></li>
-            <li><a href="chamber/">Chamber</a></li>
-            <li><a href="https://www.byui.edu/" target="_blank">BYU-Idaho</a></li>
-            <li>
-                <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng&id=p10#p10"
-                    target="_blank">Scripture</a>
-            </li>
+    <nav class="clearfix">
+        <ul>
+            <li><a href="#">About</a></li>
         </ul>
     </nav>
 
     <main>
-        <form method="get" action="record.html"></form>
-        <fieldset>
-            <legend>User Information</legend>
-            <label class="top">Username*<input type="text" name="Username" required></label>
-            <label class="top">Password*<input type="password" name="password" required pattern="[a-zA-Z0-9]{8,}"
-                    title="Please enter at least eight alpha-numeric characters."></label>
-        </fieldset>
+        <h1>Course Proposal Application</h1>
+        <form method="get" action="record.html">
+            <fieldset>
+                <legend>Applicant Information</legend>
+                <label class="top"> User Name*<input type="text" name="id" required></label>
+                <label class="top" for="keyphrase">Password*</label>
+                <input type="text" id="keyphrase" name="keyphrase" pattern="[a-zA-Z -]{8,}"
+                    placeholder="At least 8 characters long. No numbers.">
+                <label class="top" for="keyphrase2">Re-enter Your Key Password</label>
+                <input type="text" id="keyphrase2" name="keyphrase2">
+                
+                <label class="top"> Email*<input type="email" name="email" placeholder="someone@gmail.com"
+                        pattern="[a-zA-Z0-9._%+-]+@byui\.edu$" required></label>
+                <label class="top"> Phone<input type="tel" name="Phone" placeholder="1235551234"></label>
+                <label for="r">Page Rating</label>
+                <div id="rangevalue">0</div>
+                <input class="top" type="range" id="r" name="r" min="0" max="10" value="0" step="1" list="rangevalues">
+                <datalist id="rangevalues">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </datalist>
+                
+                </fieldset>
 
+            <input type="submit" value="Send My Rating" class="submitBtn">
+            </form>
     </main>
-    <footer>
-        <div class="google-map">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d230187.00306399795!2d-100.4679068735161!3d25.649011979312956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86629531b437f8f5%3A0xa3d3d3ca6ac89894!2sMonterrey%2C%20N.L.!5e0!3m2!1ses-419!2smx!4v1695943508451!5m2!1ses-419!2smx"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        <p>&copy; <span id="yearDate"></span> </p>
-        <p>Alan Sánchez</p>
-        <p>Monterrey, México</p>
-        <div id="lastModified"></div>
-    </footer>
-    <script src="scripts/getdates.js"></script>
-    <script src="scripts/links.js"></script>
-    <script src="scripts/visits.js"></script>
+<script src="scripts/scripts.js"></script>
 </body>
 
 </html>
